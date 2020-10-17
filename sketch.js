@@ -50,7 +50,7 @@ function draw() {
     background(bg3);
     tank.addImage("tank3", tank3);
   }
-  if (keyDown("space")){
+  if (keyWentDown("space")){
     bullet.velocityX = speed;
     gun.play();
   }
