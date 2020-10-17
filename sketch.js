@@ -57,6 +57,7 @@ function draw() {
 
   if (hasCollided(bullet, wall)) {
     bullet.velocityX = 0;
+    gun.stop();
     var damage = (0.5 * weight * speed * speed) / Math.pow(thickness, 3);
     if (damage > 10)
       wall.shapeColor = "red";
@@ -73,5 +74,7 @@ function draw() {
   text("Bullet Weight :" + Math.round(weight), 300, 380);
   fill("HotPink");
   text("Wall Thickness : :" + Math.round(thickness), 1000, 370);
+  fill("Cyan");
+  text("Press Space to Fire !!!",500,45);
 
 }
