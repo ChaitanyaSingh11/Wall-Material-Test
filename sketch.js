@@ -4,6 +4,7 @@ var speed, weight;
 var wall, thickness;
 var bg1, bg2, bg3, rand;
 var tank, tank1, tank2, tank3;
+var gun;
 
 function preload() {
   bulletimg = loadImage("Bullet.png");
@@ -15,6 +16,8 @@ function preload() {
   tank1 = loadImage("Tank1.png");
   tank2 = loadImage("Tank2.png");
   tank3 = loadImage("Tank3.png");
+  // loading gun sound
+  gun = loadSound("gun.mp3");
 }
 
 function setup() {
@@ -47,8 +50,10 @@ function draw() {
     background(bg3);
     tank.addImage("tank3", tank3);
   }
-  if (keyDown("space"))
+  if (keyDown("space")){
     bullet.velocityX = speed;
+    gun.play();
+  }
 
   if (hasCollided(bullet, wall)) {
     bullet.velocityX = 0;
