@@ -25,8 +25,8 @@ function setup() {
   // random value for bg and tank
   rand = Math.round(random(1, 3));
   // random value for speed, weight and thickness
-  speed = random(55, 90);
-  weight = random(400, 1500);
+  speed = random(223, 321);
+  weight = random(30, 52);
   thickness = random(22, 83);
   //creating Bullet
   bullet = createSprite(150, 200);
